@@ -1,0 +1,39 @@
+<tr>
+  <th scope="row"><%= i+1 %></th>
+  <td><h2><%= product.tensp %></h2></td>
+  <td>
+    <img style="width: 150px; height: 150px" src="<%= product.anhsp %>" />
+  </td>
+  <td><h2><%= product.mau %></h2></td>
+  <td><h2><%= product.loaisp %></h2></td>
+  <td><h2><%= product.makh %></h2></td>
+  <td><h2><%= product.tenkh %></h2></td>
+
+  
+  <td class="align-middle text-center">
+    <a
+      href="javascript:;"
+      class="text-secondary font-weight-bold text-xs"
+      data-id="<%= product._id %>"
+      data-bs-toggle="modal"
+      data-bs-target="#editProductModal"
+    >
+      <img
+        style="height: 50px; width: 50px"
+        src="data:image/png;base64,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"
+        class="img-circle"
+        alt="Cinque Terre"
+      />
+    </a>
+
+    <a
+      href="javascript:;"
+      class="btn_delete_product text-secondary font-weight-bold text-xs text-danger"
+      data-id="<%= product._id %>"
+      data-bs-toggle="modal"
+      data-bs-target="#deleteProductModal"
+    >
+      Delete
+    </a>
+  </td>
+</tr>
